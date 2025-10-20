@@ -56,7 +56,7 @@ public final class EchoClient {
         try {
             Bootstrap b = new Bootstrap();
             b.group(group)
-             .channel(NioSocketChannel.class)
+             .channel(NioSocketChannel.class) // 客户端用 SocketChannel ； 服务器用 ServerSocketChannel
              .option(ChannelOption.TCP_NODELAY, true)
              .handler(new ChannelInitializer<SocketChannel>() {
                  @Override

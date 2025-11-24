@@ -138,7 +138,7 @@ public class Bootstrap extends AbstractBootstrap<Bootstrap, Channel> {
         }
 
         final ChannelPromise promise = channel.newPromise();
-        if (regFuture.isDone()) {
+        if (regFuture.isDo ne()) {
             doConnect0(regFuture, channel, remoteAddress, localAddress, promise);
         } else {
             regFuture.addListener(new ChannelFutureListener() {
